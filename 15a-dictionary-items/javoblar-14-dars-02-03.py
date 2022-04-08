@@ -9,6 +9,7 @@ Muallif: Anvar Narzullaev
 
 Web sahifa: https://python.sariq.dev
 """
+
 davlatlar = {
     "o'zbekiston": "toshkent",
     "aqsh": "washington d.c.",
@@ -31,7 +32,7 @@ for poytaxt in sorted(davlatlar.values()):
 
 country = input("Qaysi davlatning poytaxtini bilishni istaysiz?:").lower()
 capital = davlatlar.get(country)
-if capital == None:
+if capital is None:
     print("Kechirasiz, bizda bu haqida ma'lumot yo'q")
 else:
     print(f"{country.upper()}ning poytaxti {capital.title()} shahri")

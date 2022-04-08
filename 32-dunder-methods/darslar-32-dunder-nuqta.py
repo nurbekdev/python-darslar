@@ -30,7 +30,7 @@ class Nuqta:
     def __sub__(self, boshqa):
         A = (self.x, self.y)
         B = (boshqa.x, boshqa.y)
-        return math.sqrt(sum([(a - b) ** 2 for a, b in zip(A, B)]))
+        return math.sqrt(sum((a - b) ** 2 for a, b in zip(A, B)))
 
 
 nuqtaA = Nuqta(0, 0)

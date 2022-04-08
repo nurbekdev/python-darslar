@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 otam = {"ismi": "mavlutdin", "tyil": 1954, "viloyat": "samarqand"}
 tyil = otam["tyil"]
 vil = otam["viloyat"]
@@ -42,7 +43,7 @@ print(python_izohli_lugati.get(kalit, "Bunday so'z mavjud emas"))
 
 kalit = input("Kalit so'z kiriting:").lower()
 tarjima = python_izohli_lugati.get(kalit)
-if tarjima == None:
+if tarjima is None:
     print("Bunday so'z mavjud emas")
 else:
     print(f"{kalit.title()} so'zi {tarjima} deb tarjima qilinadi")

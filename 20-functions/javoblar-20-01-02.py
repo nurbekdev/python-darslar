@@ -13,7 +13,7 @@ Web sahifa: https://python.sariq.dev
 
 def mijoz_info(ism, familiya, tyil, tjoy, email="", tel=None):
     """Mijoz haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
-    mijoz = {
+    return {
         "ism": ism,
         "familiya": familiya,
         "tyil": tyil,
@@ -22,7 +22,6 @@ def mijoz_info(ism, familiya, tyil, tjoy, email="", tel=None):
         "email": email,
         "telefon": tel,
     }
-    return mijoz
 
 
 print("Mijoz haqida ma'lumotlarni kiriting.")

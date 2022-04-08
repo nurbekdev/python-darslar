@@ -11,10 +11,11 @@ Web sahifa: https://python.sariq.dev
 """
 
 
+
 # ismlar degan ro'yxat yarating va kamida 3 ta yaqin do'stingizning ismini kiriting
 ismlar = ["Ali", "Vali", "Hasan", "Husan", "G'ani"]
 # Ro'yxatdagi har bir do'stingizga qisqa xabar yozib konsolga chiqaring:
-print("Salom " + ismlar[0] + " ishlaring yaxshimi?")
+print(f"Salom {ismlar[0]} ishlaring yaxshimi?")
 print(f"{ismlar[2]} va {ismlar[3]} egizaklar")
 print(ismlar[-1] + " g'ildirakni g'izillatib g'ildratti")
 
@@ -41,12 +42,7 @@ suhbat qilishni istar edim\n"
 )
 
 # friends nomli bo'sh ro'yxat tuzing va unga .append() yordamida 5-6 ta mehmonga chaqirmoqchi bo'lgan do'stlaringizni kiriting.
-friends = []
-friends.append("John")
-friends.append("Alex")
-friends.append("Danny")
-friends.append("Sobirjon")
-friends.append("Vanya")
+friends = ["John", "Alex", "Danny", "Sobirjon", "Vanya"]
 print(friends)
 
 # Yuqoridagi ro'yxatdan mehmonga kela olmaydigan odamlarni .remove() metodi yordamida o'chrib tashlang.
@@ -61,8 +57,7 @@ friends.insert(2, "Ivan")
 print(friends)
 
 # Yangi mehmonlar deb nomlangan bo'sh ro'yxat yarating. .pop() va .append() metodlari yordamida mehmonga kelgan do'stlaringizning ismini friends ro'yxatidan sug'urib olib, mehmonlar ro'yxatiga qo'shing.
-mehmonlar = []
-mehmonlar.append(friends.pop(3))
+mehmonlar = [friends.pop(3)]
 mehmonlar.append(friends.pop(-1))
 mehmonlar.append(friends.pop(0))
 print("\nKelgan mehmonlar: ", mehmonlar)

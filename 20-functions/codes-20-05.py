@@ -12,7 +12,7 @@ Web sahifa: https://python.sariq.dev
 
 
 def avto_info(kompaniya, model, rangi, korobka, yili, narhi=None):
-    avto = {
+    return {
         "kompaniya": kompaniya,
         "model": model,
         "rang": rangi,
@@ -20,7 +20,6 @@ def avto_info(kompaniya, model, rangi, korobka, yili, narhi=None):
         "yil": yili,
         "narh": narhi,
     }
-    return avto
 
 
 print("Saytimizdagi avtolar ro'yxatini shakllantiramiz.")
@@ -43,10 +42,7 @@ while True:
 
 print("\nSalonimizdagi avtolar:")
 for avto in avtolar:
-    if avto["narh"]:
-        narh = avto["narh"]
-    else:
-        narh = "Noma'lum"
+    narh = avto["narh"] or "Noma'lum"
     print(
         f"{avto['rang'].title()} {avto['model'].title()}, {korobka} korobka. Narhi: {narh}"
     )

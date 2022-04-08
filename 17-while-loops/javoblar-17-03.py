@@ -10,8 +10,12 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
-savol = "Kiritilgan sonning ildizini qaytaruvchi dastur.\n"
-savol += "Musbat son kiriting "
+
+savol = (
+    "Kiritilgan sonning ildizini qaytaruvchi dastur.\n"
+    + "Musbat son kiriting "
+)
+
 savol += "(dasturni to'xtatish uchun 'exit' deb yozing): "
 
 while True:

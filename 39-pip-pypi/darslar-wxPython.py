@@ -34,12 +34,11 @@ class MyFrame(wx.Frame):
         self.Show()
 
     def on_press(self, event):
-        value = self.text_ctrl.GetValue()
-        if not value:
-            self.text_out.SetValue("Soʻz kiritmadingiz")
-        else:
+        if value := self.text_ctrl.GetValue():
             tarjima = tarjimon.translate(value, src="uz", dest="en")
             self.text_out.SetValue(tarjima.text.capitalize())
+        else:
+            self.text_out.SetValue("Soʻz kiritmadingiz")
 
 
 if __name__ == "__main__":

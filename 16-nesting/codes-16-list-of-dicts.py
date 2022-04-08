@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 # Lug'atlar ro'yxati
 
 car0 = {
@@ -38,44 +39,15 @@ car2 = {
     "km": 20000,
     "korobka": "mexanika",
 }
-# car = car0
-# print(f"{car['model'].title()}, "
-#       f"{car['rang']} rang, "
-#       f"{car['yil']}-yil, {car['narh']}$")
-
-# car = car1
-# print(f"{car['model'].title()}, "
-#       f"{car['rang']} rang, "
-#       f"{car['yil']}-yil, {car['narh']}$")
-
-# car = car2
-# print(f"{car['model'].title()}, "
-#       f"{car['rang']} rang, "
-#       f"{car['yil']}-yil, {car['narh']}$")
-
-# cars = [car0, car1, car2]
-# for car in cars:
-#     print(f"{car['model'].title()}, "
-#           f"{car['rang']} rang, "
-#           f"{car['yil']}-yil, {car['narh']}$")
-
-# print(cars[0]['model'])
-
-# print(f"{cars[2]['rang'].title()} "
-#       f"{cars[2]['model']}")
-
-malibus = []
-for n in range(10):
-    new_car = {
-        "model": "malibu",
-        "rang": None,  # rangi noaniq
-        "yil": 2020,
-        "narh": None,
-        "km": 0,
-        "korobka": "avto",
-    }
-    malibus.append(new_car)
-
+new_car = {
+    "model": "malibu",
+    "rang": None,  # rangi noaniq
+    "yil": 2020,
+    "narh": None,
+    "km": 0,
+    "korobka": "avto",
+}
+malibus = [new_car for _ in range(10)]
 # for malibu in malibus:
 # print(malibu)
 
@@ -99,10 +71,6 @@ for malibu in malibus[6:]:
 #     print(malibu)
 
 for malibu in malibus:
-    if malibu["korobka"] == "avto":
-        malibu["narh"] = 40000
-    else:
-        malibu["narh"] = 35000
-
+    malibu["narh"] = 40000 if malibu["korobka"] == "avto" else 35000
 for malibu in malibus:
     print(malibu.values())

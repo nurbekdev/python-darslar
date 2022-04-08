@@ -14,11 +14,11 @@ def isIn(text, word):
 
 def findMatches(word, allWords=words):
     word = word.lower()
-    matches = []
-    for w in allWords:
-        if len(w) <= len(word) and isIn(w, word) and w != word:
-            matches.append(w)
-    return matches
+    return [
+        w
+        for w in allWords
+        if len(w) <= len(word) and isIn(w, word) and w != word
+    ]
 
 
 if __name__ == "__main__":

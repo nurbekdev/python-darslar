@@ -2,7 +2,7 @@ from pywebio.input import input, input_group
 
 
 def getInfo():
-    info = input_group(
+    return input_group(
         "Fuqaro haqida ma'lumot",
         [
             input("Ism", name="ism"),
@@ -44,4 +44,3 @@ def getInfo():
             ),
         ],
     )
-    return info

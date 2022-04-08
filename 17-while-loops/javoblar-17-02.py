@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 # Muzeyga chipta narhi foydalanuvchining
 # yoshiga bog'liq:
 # 7 dan yoshlarga - 2000 so'm,
@@ -26,7 +27,7 @@ savol = "Yoshingizni kiriting: "
 
 while True:
     qiymat = input(savol)
-    if qiymat == "exit" or qiymat == "quit":
+    if qiymat in ["exit", "quit"]:
         break
     yosh = int(qiymat)
 
