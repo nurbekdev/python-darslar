@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 import requests
 
 from bs4 import BeautifulSoup
@@ -24,10 +25,7 @@ r = requests.get(sahifa)
 soup = BeautifulSoup(r.text, "html.parser")
 # print(soup.prettify())
 news = soup.find_all(class_="news-title")
-matn = ""
-for n in news:
-    matn += n.text
-
+matn = "".join(n.text for n in news)
 stopwords = ["учун", "бўйича", "лекин", "билан", "ва", "бор", "ҳам", "хил", "йил"]
 wordcloud = WordCloud(
     width=1000,

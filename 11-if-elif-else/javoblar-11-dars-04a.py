@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 mahsulotlar = [
     "un",
     "yog'",
@@ -23,11 +24,7 @@ mahsulotlar = [
     "qovun",
 ]
 
-savat = []
-for n in range(5):
-    savat.append(input(f"Savatga {n+1}-mahsulotni qo'shing: "))
-
-if savat:
+if savat := [input(f"Savatga {n+1}-mahsulotni qo'shing: ") for n in range(5)]:
     for mahsulot in savat:
         if mahsulot in mahsulotlar:
             print(f"Do'konimizda {mahsulot} bor")

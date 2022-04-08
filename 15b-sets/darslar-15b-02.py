@@ -9,9 +9,9 @@ Muallif: Anvar Narzullaev
 
 Web sahifa: https://python.sariq.dev
 """
+
 # To'plamga element qo'shish
 mevalar = {"anjir", "olma", "uzum", "banan", "anor"}
-mevalar.add("banan")
 print(mevalar)
 mevalar.update(["anor", "qovun"])
 print(mevalar)

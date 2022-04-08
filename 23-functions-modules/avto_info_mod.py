@@ -1,6 +1,6 @@
 def avto_info(kompaniya, model, rangi, korobka, yili, narhi=None):
     """Avtomobil haqidagi ma'lumotlarni lug'at ko'rinishida qaytaruvchi funksiya"""
-    avto = {
+    return {
         "kompaniya": kompaniya,
         "model": model,
         "rang": rangi,
@@ -8,7 +8,6 @@ def avto_info(kompaniya, model, rangi, korobka, yili, narhi=None):
         "yil": yili,
         "narh": narhi,
     }
-    return avto
 
 
 def avto_kirit():

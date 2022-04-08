@@ -82,11 +82,10 @@ class AvtoSalon:
             print(f"AvtoSalon ga {type(qiymat)} qo`shib bo`lmaydi")
 
     def __call__(self, *param):
-        if param:
-            for avto in param:
-                self.add_avto(avto)
-        else:
-            return [avto for avto in self.avtolar]
+        if not param:
+            return list(self.avtolar)
+        for avto in param:
+            self.add_avto(avto)
 
     def add_avto(self, *qiymat):
         for avto in qiymat:
@@ -96,4 +95,4 @@ class AvtoSalon:
                 print("Avto obyketini kiriting")
 
     def get_list(self):
-        return [avto for avto in self.avtolar]
+        return list(self.avtolar)

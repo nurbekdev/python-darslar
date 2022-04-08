@@ -14,7 +14,7 @@ Web sahifa: https://python.sariq.dev
 def fibonacci(n):
     sonlar = []
     for x in range(n):
-        if x == 0 or x == 1:
+        if x in [0, 1]:
             sonlar.append(1)
         else:
             sonlar.append(sonlar[x - 1] + sonlar[x - 2])

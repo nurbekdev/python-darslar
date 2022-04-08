@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 # copyright Tim Ruscia aka techwithtim
 # code from https://github.com/techwithtim/OpenCV-Tutorials
 
@@ -17,8 +18,9 @@ import cv2
 
 cap = cv2.VideoCapture(0)
 face_cascade = cv2.CascadeClassifier(
-    cv2.data.haarcascades + "haarcascade_frontalface_default.xml"
+    f'{cv2.data.haarcascades}haarcascade_frontalface_default.xml'
 )
+
 eye_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_eye.xml")
 
 while True:

@@ -9,6 +9,7 @@ Muallif: Anvar Narzullaev
 
 Web sahifa: https://python.sariq.dev
 """
+
 import re
 from uzwords import words
 
@@ -24,11 +25,7 @@ print(re.match(andoza, word3))
 
 
 andoza = "^а...й$"
-matches = []
-for word in words:
-    if re.match(andoza, word):
-        matches.append(word)
-
+matches = [word for word in words if re.match(andoza, word)]
 print(matches)
 
 ## Emailni ajratib olish
@@ -43,8 +40,11 @@ print(email)
 
 # Kuchli parolni tekshirish
 andoza = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$"
-msg = "Yangi parol kiriting"
-msg += "(kamida 8 belgidan iborat, kamida 1 ta lotin bosh harf, 1 ta kichik harf, "
+msg = (
+    "Yangi parol kiriting"
+    + "(kamida 8 belgidan iborat, kamida 1 ta lotin bosh harf, 1 ta kichik harf, "
+)
+
 msg += "1 ta son va 1 ta maxsus belgi boʻlishi kerak): "
 
 while True:

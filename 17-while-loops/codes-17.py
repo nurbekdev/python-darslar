@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 input()
 ism = input("Ismingiz nima? ")
 savol = f"Salom, {ism.title()}. Yoshingiz nechida? "
@@ -18,11 +19,8 @@ yosh = int(yosh)
 height = input("Bo'yingiz necha metr? ")
 height = float(height)
 
-# while()
-son = 1  # son ga 1 qiymatini beramiz
-while son <= 5:  # toki son 5 dan kichik yoki teng ekan...
+for son in range(1, 6):  # toki son 5 dan kichik yoki teng ekan...
     print(son, end=" ")  # son ni konsolga chiqaramiz
-    son = son + 1
     # son += 1 # songa 1 qo'shamiz
 
 

@@ -38,10 +38,7 @@ def sontop_pc(x=10):
     taxminlar = 0
     while True:
         taxminlar += 1
-        if quyi != yuqori:
-            taxmin = random.randint(quyi, yuqori)
-        else:
-            taxmin = quyi
+        taxmin = random.randint(quyi, yuqori) if quyi != yuqori else quyi
         javob = input(
             f"Siz {taxmin} sonini o'yladingiz: to'g'ri (t),"
             f"men o'ylagan son bundan kattaroq (+), yoki kichikroq (-)".lower()

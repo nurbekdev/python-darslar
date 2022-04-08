@@ -10,8 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
-#!!! Quyidagi usul tavsiya qilinmaydi
-file = open("pi.txt")
-PI = file.read()
-print(PI)
-file.close()
+
+with open("pi.txt") as file:
+    PI = file.read()
+    print(PI)

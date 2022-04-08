@@ -6,6 +6,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 mahsulotlar = [
     "un",
     "yog'",
@@ -20,10 +21,7 @@ mahsulotlar = [
 ]
 
 
-savat = []
-for n in range(5):
-    savat.append(input(f"Savatga {n+1}-mahsulotni qo'shing: "))
-
+savat = [input(f"Savatga {n+1}-mahsulotni qo'shing: ") for n in range(5)]
 bor_mahsulotlar = []
 mavjud_emas = []
 for mahsulot in savat:

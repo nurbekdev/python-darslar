@@ -10,8 +10,11 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
-savol = "Sevgan kitobingizni kiriting"
-savol += "(barcha kitoblarni kiritib bo'lgach 'exit' deb yozing): "
+
+savol = (
+    "Sevgan kitobingizni kiriting"
+    + "(barcha kitoblarni kiritib bo'lgach 'exit' deb yozing): "
+)
 
 while True:
     kitob = input(savol)

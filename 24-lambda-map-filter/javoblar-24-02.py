@@ -9,10 +9,11 @@ Muallif: Anvar Narzullaev
 
 Web sahifa: https://python.sariq.dev
 """
+
 from random import sample
 from math import sqrt
 
-x = list(range(0, 1001))
+x = list(range(1001))
 y = sample(x, k=10)
 print(y)
 

@@ -9,6 +9,7 @@ Muallif: Anvar Narzullaev
 
 Web sahifa: https://python.sariq.dev
 """
+
 import datetime as dt
 
 # datetime()
@@ -51,7 +52,7 @@ futbol = dt.datetime(2021, 3, 10, 23, 45, 00)
 farq = futbol - hozir
 sekundlar = farq.seconds
 minutlar = int(sekundlar / 60)
-soatlar = int(minutlar / 60)
+soatlar = minutlar // 60
 print(f"Futbol boshlanishiga {farq.days} kunu {soatlar} soat qoldi")
 
 # Vatqni formatlash

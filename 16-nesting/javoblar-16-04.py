@@ -10,6 +10,7 @@ Muallif: Anvar Narzullaev
 Web sahifa: https://python.sariq.dev
 """
 
+
 davlatlar = {
     "o'zbekiston": {
         "poytaxt": "toshkent",
@@ -38,10 +39,7 @@ davlatlar = {
 }
 
 for davlat, info in davlatlar.items():
-    if davlat.lower() == "aqsh":
-        davlat = davlat.upper()
-    else:
-        davlat = davlat.capitalize()
+    davlat = davlat.upper() if davlat.lower() == "aqsh" else davlat.capitalize()
     print(
         f"\n{davlat}ning poytaxti {info['poytaxt'].title()}"
         f"\nHududi: {info['maydon']} kv.km"

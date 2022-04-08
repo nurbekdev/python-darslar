@@ -7,8 +7,11 @@ tarjimonbot = telebot.TeleBot(token=TOKEN)
 # \start komandasi uchun mas'ul funksiya
 @tarjimonbot.message_handler(commands=["start"])
 def salom(message):
-    xabar = "Assalom alaykum, tarjimon botiga xush kelbisiz."
-    xabar += "\nMatningizni yuboring."
+    xabar = (
+        "Assalom alaykum, tarjimon botiga xush kelbisiz."
+        + "\nMatningizni yuboring."
+    )
+
     tarjimonbot.reply_to(message, xabar)
 
 

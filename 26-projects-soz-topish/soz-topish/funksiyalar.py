@@ -22,13 +22,7 @@ def get_word():
 
 
 def display(user_letters, word):
-    display_letter = ""
-    for letter in word:
-        if letter in user_letters:
-            display_letter += letter
-        else:
-            display_letter += "-"
-    return display_letter
+    return "".join(letter if letter in user_letters else "-" for letter in word)
 
 
 def play():

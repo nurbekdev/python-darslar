@@ -1386,11 +1386,7 @@ def to_cyrillic(text):
 
     def replace_exception_words(m):
         """Replace ц (or э) only leaving other characters unchanged"""
-        return "%s%s%s" % (
-            m.group(1)[: m.start(2)],
-            exception_words_rules[m.group(2)],
-            m.group(1)[m.end(2) :],
-        )
+        return f"{m.group(1)[: m.start(2)]}{exception_words_rules[m.group(2)]}{m.group(1)[m.end(2) :]}"
 
     # loop because of python's limit of 100 named groups
     for word in list(TS_WORDS.keys()) + list(E_WORDS.keys()):
@@ -1453,11 +1449,11 @@ def to_latin(text):
 
     text = re.sub(
         r"(сент|окт)([яЯ])(бр)",
-        lambda x: "%s%s%s"
-        % (x.group(1), "a" if x.group(2) == "я" else "A", x.group(3)),
+        lambda x: f'{x.group(1)}{"a" if x.group(2) == "я" else "A"}{x.group(3)}',
         text,
         flags=re.IGNORECASE | re.U,
     )
+
 
     text = re.sub(
         r"\b(%s)" % "|".join(beginning_rules.keys()),
@@ -1467,18 +1463,20 @@ def to_latin(text):
     )
 
     text = re.sub(
-        r"(%s)(%s)" % ("|".join(CYRILLIC_VOWELS), "|".join(after_vowel_rules.keys())),
-        lambda x: "%s%s" % (x.group(1), after_vowel_rules[x.group(2)]),
+        f'({"|".join(CYRILLIC_VOWELS)})({"|".join(after_vowel_rules.keys())})',
+        lambda x: f"{x.group(1)}{after_vowel_rules[x.group(2)]}",
         text,
         flags=re.U,
     )
 
+
     text = re.sub(
-        r"(%s)" % "|".join(CYRILLIC_TO_LATIN.keys()),
+        f'({"|".join(CYRILLIC_TO_LATIN.keys())})',
         lambda x: CYRILLIC_TO_LATIN[x.group(1)],
         text,
         flags=re.U,
     )
+
 
     return text
 

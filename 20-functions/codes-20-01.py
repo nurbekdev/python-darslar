@@ -13,8 +13,7 @@ Web sahifa: https://python.sariq.dev
 
 def toliq_ism_yasa(ism, familiya):
     """Toliq ism qaytaruvchi funksiya"""
-    toliq_ism = f"{ism} {familiya}"
-    return toliq_ism
+    return f"{ism} {familiya}"
 
 
 talaba1 = toliq_ism_yasa("olim", "hakimov")

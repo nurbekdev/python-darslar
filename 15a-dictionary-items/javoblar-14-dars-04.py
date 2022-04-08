@@ -9,6 +9,7 @@ Muallif: Anvar Narzullaev
 
 Web sahifa: https://python.sariq.dev
 """
+
 menu = {
     "osh": 20000,
     "lag'mon": 22000,
@@ -20,10 +21,7 @@ menu = {
 }
 
 print("3 ta taom buyurtma bering.")
-buyurtmalar = []
-for n in range(3):
-    buyurtmalar.append(input(f"{n+1}-taom:").lower())
-
+buyurtmalar = [input(f"{n+1}-taom:").lower() for n in range(3)]
 for buyurtma in buyurtmalar:
     if buyurtma in menu:
         print(f"{buyurtma.title()} {menu[buyurtma]} so'm")
